@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<link href="/boots/assets/bootstrap/css/bootstrap.css" rel="stylesheet"
+	type="text/css">
+<link href="/boots/assets/css/common.css" rel="stylesheet"
+	type="text/css">
+<script type="text/javascript"
+	src="/boots/assets/js/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript"
+	src="/boots/assets/bootstrap/js/bootstrap.js"></script>
+
+
+<title>Insert title here</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse">
+		<!-- 클래스는 여러개여도 됨. -->
+		<div class="container-fulid">
+			<div class="container">
+				<div class="row">
+					<!-- row를 넣어줌으로써, 기본 15px의 padding 여백을 없애줌 .-->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed"
+							data-toggle="collapse"
+							data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span> 
+							<span class="icon-bar"></span> 
+							<span class="icon-bar"></span> 
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#"> 
+							<img src="/boots/assets/images/logo.png">
+						</a>
+					</div>
+
+					<div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li><a href="#">프로필</a></li>
+							<li><a href="#">게시판</a></li>
+							<li><a href="#">게스트북</a></li>
+						</ul>
+						<ul class="nav navbar-nav pull-right">
+							<li><a href="#">로그인</a></li>
+							<li><a href="#">회원가입</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- container -->
+		</div>
+		<!-- container-fluid -->
+	</nav>
+	<!-- navigation -->
+
+	<!-- 그리드시스템 2:8로 나누기 -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2">
+				<!-- div border(선) 1px로 살려보면, 2:8로 나눠진 것이 보임. -->
+				<img class="profile img-thumbnail" src="/boots/assets/images/profile.png">
+				<p>소한준</p>
+				<p>realso0</p>
+			</div>
+			<div class="col-md-10">
+				<ol class="breadcrumb">
+					<!-- 순서가 없는 리스트 ol -->
+					<li><a>my site</a></li>
+					<li><a>게시판</a></li>
+					<li><a>리스트</a></li>
+				</ol>
+
+				<table class="table table-hover">
+					<colgroup>
+						<!-- 합 100%를 기준으로 함. 퍼센트로 해줌으로써, 화면 줄여도 안 깨짐.-->
+						<col width="5%">
+						<col width="">
+						<!-- 퍼센트 나머지부분은 제목부분이 다 가져가도록 미지정해둠. -->
+						<col width="15%">
+						<col width="7%">
+						<col width="15%">
+						<col width="5%">
+					</colgroup>
+
+					<thead>
+						<tr>
+							<th>번호</th>
+							<!-- table head(th)를 써줌으로써 윗단이 강조됨. -->
+							<th>제목</th>
+							<th>글쓴이</th>
+							<th>조회수
+							<th>작 성일</th>
+							<th>관리</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<!-- td는 table data의 약자 -->
+							<td>회원 분들은 꼭 읽어주세요<span class="label label-danger">공지</span></td> <!-- 라벨 -->
+							<td class="text-right">소한준</td>
+							<td class="text-center">1</td>
+							<td>2018-02-21</td>
+							<td><span class="glyphicon glyphicon-remove-sign text-danger"></span></td> <!-- 아이콘 -->
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>첫번째 글입니다.</td>
+							<td>소한준</td>
+							<td>1</td>
+							<td>2018-02-21</td>
+							<td><span class="glyphicon glyphicon-remove-sign text-danger"></span></td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>첫번째 글입니다.</td>
+							<td>소한준</td>
+							<td>1</td>
+							<td>2018-02-21</td>
+							<td><span class="glyphicon glyphicon-remove-sign text-danger"></span></td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>첫번째 글입니다.</td>
+							<td>소한준</td>
+							<td>1</td>
+							<td>2018-02-21</td>
+							<td><span class="glyphicon glyphicon-remove-sign text-danger"></span></td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<div class="pull-right">
+					<button type="button" class="btn btn-info btn-sm">글쓰기</button> 
+					<!-- 이미 assets 폴더에 btn-info라는 색깔을 정의해 놓은 것을 가져다 쓴 것임. -->
+					<a class="btn btn-info btn-sm" href="">글쓰기</a> <!-- 글쓰기는 기능이 없이 페이지 이동만 하므로, href 링크만 걸어두지만, 보기 좋기위해, class=btn 해줌. -->
+				</div>
+				
+				<!-- 페이지네이션 -->
+				<nav class="text-center">
+					<ul class="pagination pagination-sm">
+						<li>
+							<a href="#" aria-label="Previous">
+								<span aria-hidden="true">&laquo;</span>
+							</a>
+						</li>
+						<li><a href="#">1</a></li>
+						<li class="active"><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</body>
+
+
+</html>
